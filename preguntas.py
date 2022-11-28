@@ -18,8 +18,8 @@ def pregunta_01():
     df = pd.read_csv("gm_2008_region.csv")
 
     # Asigne la columna "life" a `y` y la columna "fertility" a `X`
-    y = df[life].values
-    X = df[fertility].values
+    y = df["life"].values
+    X = df["fertility"].values
 
     # Imprima las dimensiones de `y`
     print(y.shape)
@@ -128,7 +128,7 @@ def pregunta_04():
     # Divida los datos de entrenamiento y prueba. La semilla del generador de números
     # aleatorios es 53. El tamaño de la muestra de entrenamiento es del 80%
     (X_train, X_test, y_train, y_test,) = train_test_split(
-        X_fesrtility,
+        X_fertility,
         y_life,
         test_size=0.20,
         random_state=53,
